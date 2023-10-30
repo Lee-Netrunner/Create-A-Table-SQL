@@ -1,0 +1,61 @@
+-- 1. Creating the Table
+-- This statement is creating a new table named 'friends'.
+-- It has three columns: 'id' of type INTEGER, 'name' of type TEXT, and 'birthday' of type DATE.
+CREATE TABLE friends (
+  id INTEGER,
+  name TEXT,
+  birthday DATE
+);
+
+-- 2. Inserting Data
+-- Inserting a row into 'friends' table with values for 'id', 'name', and 'birthday'.
+INSERT INTO friends (id, name, birthday)
+VALUES (1, 'Ororo Munroe', '1940-05-30');
+
+-- 3. Retrieving and Displaying All Data
+-- Selecting and displaying all columns from all rows in 'friends' table.
+SELECT *
+FROM friends;
+
+-- 4. Inserting More Data
+-- Inserting additional rows into 'friends' table.
+INSERT INTO friends (id, name, birthday)
+VALUES (2, 'James Baldwin', '1975-01-15');
+
+INSERT INTO friends (id, name, birthday)
+VALUES (3, 'Tyler Boyd', '1991-10-25');
+
+-- 5. Updating Data
+-- Updating the 'name' of the friend with 'id' 1 to 'Storm'.
+UPDATE friends
+SET name = 'Storm'
+WHERE id = 1;
+
+-- 6. Adding a New Column
+-- Adding a new column 'email' of type TEXT to 'friends' table.
+ALTER TABLE friends
+ADD COLUMN email TEXT; 
+
+-- 7. Updating Email Addresses
+-- Updating the 'email' address for each friend in 'friends' table.
+UPDATE friends
+SET email = 'storm@codecademy.com'
+WHERE id = 1;
+
+UPDATE friends
+SET email = 'JamesB@codecademy.com'
+WHERE id = 2;
+
+UPDATE friends
+SET email = 'TylerB@codecademy.com'
+WHERE id = 3;
+
+-- 8. Deleting Data
+-- Deleting the friend with 'id' 1 from 'friends' table.
+DELETE FROM friends
+WHERE id = 1;
+
+-- 9. Retrieving and Displaying All Remaining Data
+-- Selecting and displaying all columns from all remaining rows in 'friends' table.
+SELECT *
+FROM friends;
